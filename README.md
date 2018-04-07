@@ -1,8 +1,20 @@
 # Bracket Colorizer
 
-Finding brackets is easier than ever now. Uniquely colors upto 10 bracket pairs after which the color repeats.
+Finding brackets is easier than ever now. This atom extension uniquely colors upto 10 bracket pairs after which the color repeats.
 
+<p align='center'>
 ![Bracket Colorizer](.github/screenshot1.png)
+</p>
+### Note
+
+This extension does not declare any shortcut by default. Use the command pallete to toggle the extension.
+
+If you want to add a shortcut, add the following line to you custom keymap.
+
+```
+'atom-workspace':
+  'ctrl-alt-q': 'bracket-colorizer:toggle'
+```
 
 ### TODO
 
