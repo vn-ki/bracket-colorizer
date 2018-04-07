@@ -2,9 +2,10 @@
 
 Finding brackets is easier than ever now. This atom extension uniquely colors upto 10 bracket pairs after which the color repeats.
 
-<p align='center'>
-![Bracket Colorizer](.github/screenshot1.png)
+<p align="center">
+<img src=".github/screenshot1.png" alt="Screenshot">
 </p>
+
 ### Note
 
 This extension does not declare any shortcut by default. Use the command pallete to toggle the extension.
