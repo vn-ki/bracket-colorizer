@@ -6,6 +6,14 @@ Finding brackets is easier than ever now. This atom extension uniquely colors up
 <img src=".github/screenshot1.png" alt="Screenshot">
 </p>
 
+## Installation
+
+You can use apm for install.
+
+```
+apm install bracket-colorizer
+```
+
 ### Note
 
 This extension does not declare any shortcut by default. Use the command pallete to toggle the extension.
