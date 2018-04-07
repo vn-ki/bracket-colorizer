@@ -1,0 +1,18 @@
+{
+  "name": "bracket-colorizer",
+  "main": "./lib/bracket-colorizer",
+  "version": "0.0.0",
+  "description": "Colorize brackets based on their depth",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "bracket-colorizer:toggle"
+  },
+  "repository": "https://github.com/vn-ki/bracket-colorizer",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

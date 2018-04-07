@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle bracket-colorizer",
+        "command": "bracket-colorizer:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "bracket-colorizer",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "bracket-colorizer:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
