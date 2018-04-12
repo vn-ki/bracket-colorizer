@@ -8,5 +8,9 @@ module.exports = {
     "atomtest": true,
     "browser": true,
     "node": true,
-  }
+  },
+  rules: {
+    "no-console": "warn",
+    "indent": ["error", 2],
+  },
 };
