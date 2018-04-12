@@ -4,13 +4,13 @@
   "version": "0.2.0",
   "description": "Colorize brackets based on their depth",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "bracket-colorizer:toggle"
-  },
   "repository": "https://github.com/vn-ki/bracket-colorizer",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
 }
