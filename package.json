@@ -1,7 +1,7 @@
 {
   "name": "bracket-colorizer",
   "main": "./lib/bracket-colorizer",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Colorize brackets based on their depth",
   "keywords": [],
   "repository": "https://github.com/vn-ki/bracket-colorizer",
