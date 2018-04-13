@@ -1,3 +1,6 @@
+## 1.0.0
+* Major rewrite (#6)
+
 ## 0.3.0
 * Comments and strings are no longer colorized. @UziTech (#4)
 
