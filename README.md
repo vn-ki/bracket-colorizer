@@ -14,17 +14,6 @@ You can use apm for install.
 apm install bracket-colorizer
 ```
 
-### Note
-
-This extension does not declare any shortcut by default. Use the command pallete to toggle the extension.
-
-If you want to add a shortcut, add the following line to you custom keymap.
-
-```
-'atom-workspace':
-  'ctrl-alt-q': 'bracket-colorizer:toggle'
-```
-
 ### TODO
 
 - Indicate missing brackets
@@ -33,3 +22,8 @@ If you want to add a shortcut, add the following line to you custom keymap.
 - Provide option to exclude files
 
 Based on [nms-color-bracket](https://github.com/nmscholl/nms-color-bracket).
+
+### Breaking changes in 1.0
+
+- In settings, `'{;}, [;], (;)'` format is changed to `'{}, [], ()'`
+- The toggle is removed. Package now activates on startup.
