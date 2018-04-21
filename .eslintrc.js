@@ -8,9 +8,15 @@ module.exports = {
     "atomtest": true,
     "browser": true,
     "node": true,
+    "jasmine":true,
   },
   rules: {
     "no-console": "warn",
     "indent": ["error", 2],
+  },
+  globals: {
+    "atom": false,
+    "WeakMap": false,
+    "Promise": false,
   },
 };
