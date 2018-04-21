@@ -1,5 +1,7 @@
 # Bracket Colorizer
 
+[![Build Status](https://travis-ci.org/vn-ki/bracket-colorizer.svg?branch=master)](https://travis-ci.org/vn-ki/bracket-colorizer)
+
 Finding brackets is easier than ever now. This atom extension uniquely colors upto 10 bracket pairs after which the color repeats.
 
 <p align="center">
@@ -17,9 +19,6 @@ apm install bracket-colorizer
 ### TODO
 
 - Indicate missing brackets
-- Improve bracket matching
-- Provide option for custom bracket matching
-- Provide option to exclude files
 
 Based on [nms-color-bracket](https://github.com/nmscholl/nms-color-bracket).
 
