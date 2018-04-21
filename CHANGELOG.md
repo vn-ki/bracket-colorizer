@@ -1,3 +1,6 @@
+## 1.1.0
+* Add option to exclude files.
+
 ## 1.0.0
 * Major rewrite (#6)
 
