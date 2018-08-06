@@ -23,13 +23,22 @@ describe('bracket-matcher', function () {
   describe("commentString.js", function () {
 
     beforeEach(async function () {
+      atom.config.set("core.useTreeSitterParsers", true);
       await atom.packages.activatePackage('language-javascript');
       this.editor = await atom.workspace.open('./commentString.js');
-      this.editor.getBuffer().getLanguageMode().startTokenizing();
-      await new Promise(resolve => this.editor.onDidTokenize(resolve));
     });
 
-    it("should only count non-comment/string brackets", async function () {
+    it("should only count non-comment/string brackets without tree-sitter", async function () {
+      atom.config.set("core.useTreeSitterParsers", false);
+      this.editor.getBuffer().getLanguageMode().startTokenizing();
+      await new Promise(resolve => this.editor.onDidTokenize(resolve));
+
+      new BracketMatcher(this.editor, ['{}', '()', '[]']);
+      const markers = this.editor.getDecorations({stamp: 'bracket-colorizer'});
+      expect(markers.length).toBe(6);
+    });
+
+    it("should only count non-comment/string brackets with tree-sitter", async function () {
       new BracketMatcher(this.editor, ['{}', '()', '[]']);
       const markers = this.editor.getDecorations({stamp: 'bracket-colorizer'});
       expect(markers.length).toBe(6);
