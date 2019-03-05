@@ -26,22 +26,22 @@ You can customize the colors by adding the following to your [global style sheet
 ```less
 atom-text-editor.editor {
   .bracket-colorizer-color0 {
-      color: white;
+    color: white;
   }
   .bracket-colorizer-color1  {
-      color: lighten(teal, 30);
-    }
+    color: lighten(teal, 30);
+  }
   .bracket-colorizer-color2 {
-      color: yellow;
-    }
+    color: yellow;
+  }
   .bracket-colorizer-color3  {
-      color: lightblue;
+    color: lightblue;
   }
   .bracket-colorizer-color4  {
-      color: lightgreen;
+    color: lightgreen;
   }
   .bracket-colorizer-color5 {
-      color: violet;
+    color: violet;
   }
   .bracket-colorizer-color6 {
     color: orange;
@@ -53,7 +53,7 @@ atom-text-editor.editor {
     color: rgb(249, 98, 98);
   }
   .bracket-colorizer-color9 {
-      color: rgb(1, 204, 190);
+    color: rgb(1, 204, 190);
   }
 }
 ```
