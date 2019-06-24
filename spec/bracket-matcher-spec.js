@@ -73,8 +73,8 @@ describe('bracket-matcher', function () {
   describe("color order", function () {
 
     beforeEach(async function () {
-      const editor = await atom.workspace.open();
-      this.getOrder = (text, options = {}) => {
+      this.getOrder = async (text, options = {}) => {
+        const editor = await atom.workspace.open();
         editor.setText(text);
         new BracketMatcher(editor, options);
         return editor.getDecorations({stamp: 'bracket-colorizer'})
@@ -83,37 +83,49 @@ describe('bracket-matcher', function () {
     });
 
     it("should alternate nested brackets", async function () {
-      const colors = this.getOrder("{{{}}}");
+      const colors = await this.getOrder("{{{}}}");
       expect(colors).toEqual([1, 2, 3, 3, 2, 1]);
     });
 
     it("should not alternate different nested brackets", async function () {
-      const colors = this.getOrder("{([])}");
+      const colors = await this.getOrder("{([])}");
       expect(colors).toEqual([1, 1, 1, 1, 1, 1]);
     });
 
     it("should not alternate consecutive brackets", async function () {
-      const colors = this.getOrder("{}{}{}");
+      const colors = await this.getOrder("{}{}{}");
       expect(colors).toEqual([1, 1, 1, 1, 1, 1]);
+    });
+
+    it("should alternate consecutive brackets", async function () {
+      const colors = await this.getOrder("{}{}{}", {alternateConsecutive: true});
+      expect(colors).toEqual([1, 1, 2, 2, 3, 3]);
     });
 
     it("should not alternate different consecutive brackets", async function () {
-      const colors = this.getOrder("{}()[]");
+      const colors = await this.getOrder("{}()[]", {alternateDifferent: true});
       expect(colors).toEqual([1, 1, 1, 1, 1, 1]);
+      const colors2 = await this.getOrder("{}()[]", {alternateConsecutive: true});
+      expect(colors2).toEqual([1, 1, 1, 1, 1, 1]);
+    });
+
+    it("should alternate different consecutive brackets", async function () {
+      const colors = await this.getOrder("{}()[]", {alternateDifferent: true, alternateConsecutive: true});
+      expect(colors).toEqual([1, 1, 2, 2, 3, 3]);
     });
 
     it("should alternate different nested brackets", async function () {
-      const colors = this.getOrder("{([])}", {alternateDifferent: true});
+      const colors = await this.getOrder("{([])}", {alternateDifferent: true});
       expect(colors).toEqual([1, 2, 3, 3, 2, 1]);
     });
 
     it("should not alternate different consecutive brackets", async function () {
-      const colors = this.getOrder("{}()[]", {alternateDifferent: true});
+      const colors = await this.getOrder("{}()[]", {alternateDifferent: true});
       expect(colors).toEqual([1, 1, 1, 1, 1, 1]);
     });
 
     it("should distinguish between different brackets", async function () {
-      const colors = this.getOrder("{([})]", {alternateDifferent: true});
+      const colors = await this.getOrder("{([})]", {alternateDifferent: true});
       expect(colors).toEqual([1, 2, 3, 1, 2, 3]);
     });
 
