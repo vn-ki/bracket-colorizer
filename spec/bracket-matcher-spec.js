@@ -112,6 +112,11 @@ describe('bracket-matcher', function () {
       expect(colors).toEqual([1, 1, 1, 1, 1, 1]);
     });
 
+    it("should distinguish between different brackets", async function () {
+      const colors = this.getOrder("{([})]", {alternateDifferent: true});
+      expect(colors).toEqual([1, 2, 3, 1, 2, 3]);
+    });
+
   });
 
 });
