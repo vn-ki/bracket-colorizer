@@ -77,7 +77,7 @@ describe('bracket-matcher', function () {
       this.editor = await atom.workspace.open('./mathString.tex');
     });
 
-    it("should count math brackets with tree-sitter", async function () {
+    it("should count math brackets", async function () {
       this.editor.getBuffer().getLanguageMode().startTokenizing();
       await new Promise(resolve => this.editor.onDidTokenize(resolve));
       new BracketMatcher(this.editor, {

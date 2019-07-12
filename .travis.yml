@@ -2,7 +2,7 @@ language: generic
 
 sudo: false
 os: linux
-dist: trusty
+dist: xenial
 
 env:
   global:
@@ -35,3 +35,4 @@ addons:
     - fakeroot
     - git
     - libsecret-1-dev
+    - libgconf-2-4
