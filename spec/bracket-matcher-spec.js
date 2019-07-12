@@ -85,7 +85,7 @@ describe('bracket-matcher', function () {
         repeatColorCount: 10,
       });
       const markers = this.editor.getDecorations({stamp: 'bracket-colorizer'});
-      expect(markers.length).toBe(8);
+      expect(markers.length).toBe(33);
     });
 
   });
