@@ -70,6 +70,26 @@ describe('bracket-matcher', function () {
 
   });
 
+  describe("mathString.js", function () {
+
+    beforeEach(async function () {
+      await atom.packages.activatePackage('language-latex');
+      this.editor = await atom.workspace.open('./mathString.tex');
+    });
+
+    it("should count math brackets with tree-sitter", async function () {
+      this.editor.getBuffer().getLanguageMode().startTokenizing();
+      await new Promise(resolve => this.editor.onDidTokenize(resolve));
+      new BracketMatcher(this.editor, {
+        brackets: ['{}', '()', '[]'],
+        repeatColorCount: 10,
+      });
+      const markers = this.editor.getDecorations({stamp: 'bracket-colorizer'});
+      expect(markers.length).toBe(8);
+    });
+
+  });
+
   describe("color order", function () {
 
     beforeEach(async function () {

@@ -6,7 +6,7 @@ dist: trusty
 
 env:
   global:
-    - APM_TEST_PACKAGES=""
+    - APM_TEST_PACKAGES="language-latex"
     - ATOM_LINT_WITH_BUNDLED_NODE="true"
 
   matrix:
