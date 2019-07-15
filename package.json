@@ -9,12 +9,16 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "scripts": {
+    "test": "atom --test spec",
+    "lint": "eslint ."
+  },
   "atomTestRunner": "./spec/runner",
   "dependencies": {
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
-    "atom-jasmine3-test-runner": "^4.3.5",
-    "eslint": "^6.0.0"
+    "atom-jasmine3-test-runner": "^4.3.7",
+    "eslint": "^6.0.1"
   }
 }
