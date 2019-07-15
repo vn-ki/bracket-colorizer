@@ -2,11 +2,11 @@ language: generic
 
 sudo: false
 os: linux
-dist: trusty
+dist: xenial
 
 env:
   global:
-    - APM_TEST_PACKAGES=""
+    - APM_TEST_PACKAGES="language-latex"
     - ATOM_LINT_WITH_BUNDLED_NODE="true"
 
   matrix:
@@ -35,3 +35,4 @@ addons:
     - fakeroot
     - git
     - libsecret-1-dev
+    - libgconf-2-4
