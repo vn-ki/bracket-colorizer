@@ -1,6 +1,6 @@
 # Bracket Colorizer
 
-[![Build Status](https://travis-ci.org/vn-ki/bracket-colorizer.svg?branch=master)](https://travis-ci.org/vn-ki/bracket-colorizer)
+[![Build Status](https://github.com/vn-ki/bracket-colorizer/workflows/CI/badge.svg)](https://github.com/vn-ki/bracket-colorizer/actions)
 
 Finding brackets is easier than ever now. This atom extension uniquely colors bracket pairs.
 
