@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "atom-jasmine3-test-runner": "^5.1.8",
-    "eslint": "^7.20.0"
+    "eslint": "^7.21.0"
   }
 }
