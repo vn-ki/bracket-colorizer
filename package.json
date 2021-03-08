@@ -18,7 +18,7 @@
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
-    "atom-jasmine3-test-runner": "^5.1.8",
+    "atom-jasmine3-test-runner": "^5.1.9",
     "eslint": "^7.21.0"
   }
 }
