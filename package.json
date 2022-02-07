@@ -15,7 +15,7 @@
   },
   "atomTestRunner": "./spec/runner",
   "dependencies": {
-    "minimatch": "^3.0.4"
+    "minimatch": "^3.0.5"
   },
   "devDependencies": {
     "atom-jasmine3-test-runner": "^5.2.10",
